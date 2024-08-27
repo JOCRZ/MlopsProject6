@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import itertools
-import os
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LogisticRegression
@@ -12,8 +11,8 @@ from sklearn.metrics import confusion_matrix, precision_score, f1_score, recall_
 sns.set(style='white')
 
 #Load Data
-pwd = os.getcwd()
-dataset = pd.read_csv(pwd+'/data/iris.csv')
+
+dataset = pd.read_csv('MlopsProject6/data/iris.csv')
 
 #Feature names
 dataset.columns = [colname.strip(' (cm)').replace(" ", "_") for colname in dataset.columns.tolist()]
